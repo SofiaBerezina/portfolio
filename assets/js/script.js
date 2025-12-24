@@ -107,6 +107,15 @@ function switchLanguage(lang) {
         }
     }
 
+    const downloadLink = document.querySelector('.download-link');
+    if (downloadLink) {
+        if (lang === 'en') {
+            downloadLink.textContent = 'Download resume';
+        } else {
+            downloadLink.textContent = 'Скачать резюме';
+        }
+    }
+
     // Service item texts
     const serviceItemTexts = document.querySelectorAll('.service-item-text');
     if (serviceItemTexts.length >= 2) {
