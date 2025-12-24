@@ -721,9 +721,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Добавь в конец style.css */
 
-.links-section {
-    margin-bottom: 35px;
-}
+
 
 .links-title {
     margin-bottom: 20px;
@@ -804,6 +802,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 .resource-card:hover .resource-arrow {
     color: var(--orange-yellow-crayola);
     transform: translateX(5px);
+}
+
+.download-link {
+    color: var(--eerie-black-1);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    display: flex;
+    background: var(--orange-yellow-crayola);
+    width: fit-content;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 40px auto 0 auto;
+    transition: var(--transition-1);
+}
+
+.download-link:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-3);
 }
 
 /* Адаптивность */
@@ -1247,7 +1263,7 @@ html {
         max-height: max-content;
         height: 100%;
         margin-bottom: 0;
-        padding-top: 60px;
+        padding-top: 30px;
         z-index: 1;
     }
 
