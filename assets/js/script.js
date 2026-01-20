@@ -22,7 +22,7 @@ function switchLanguage(lang) {
     const sidebarBtnSpan = document.querySelector('[data-sidebar-btn] span');
 
     if (nameEl) nameEl.textContent = lang === 'en' ? 'Sofia Berezina' : 'Березина Софья';
-    if (titleEl) titleEl.textContent = lang === 'en' ? 'Web Developer' : 'Веб-разработчик';
+    if (titleEl) titleEl.textContent = lang === 'en' ? 'Frontend Developer' : 'Frontend-разработчик';
     if (sidebarBtnSpan) sidebarBtnSpan.textContent = lang === 'en' ? 'Contacts' : 'Контакты';
 
     // Navigation - update text
@@ -120,10 +120,10 @@ function switchLanguage(lang) {
     const serviceItemTexts = document.querySelectorAll('.service-item-text');
     if (serviceItemTexts.length >= 2) {
         if (lang === 'en') {
-            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS, Bootstrap, JavaScript, adaptive layout';
+            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS/SASS, Bootstrap, JavaScript, adaptive semantic layout';
             serviceItemTexts[1].textContent = 'Python, Django Framework, SQL, Flask, API, DataBases';
         } else {
-            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS, Bootstrap, JavaScript, адаптивная верстка';
+            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS/SASS, Bootstrap, JavaScript, адаптивная семантическая верстка';
             serviceItemTexts[1].textContent = 'Python, Django Framework, SQL, Flask, API, работа с базами данных';
         }
     }
@@ -152,16 +152,18 @@ function switchLanguage(lang) {
             skillTitles[2].textContent = 'Data Analysis (Pandas, NumPy)';
             skillTitles[3].textContent = 'SQL & DataBases';
             skillTitles[4].textContent = 'JavaScript (In Progress)';
-            skillTitles[5].textContent = 'Git & Team Work';
-            skillTitles[6].textContent = 'Swift';
+            skillTitles[5].textContent = 'TypeScript (In Progress)';
+            skillTitles[6].textContent = 'Git & Team Work';
+            skillTitles[7].textContent = 'Swift';
         } else {
             skillTitles[0].textContent = 'HTML/CSS/SCSS Верстка';
             skillTitles[1].textContent = 'Python & Django';
             skillTitles[2].textContent = 'Анализ Данных (Pandas, NumPy)';
             skillTitles[3].textContent = 'SQL & Базы Данных';
             skillTitles[4].textContent = 'JavaScript (В процессе)';
-            skillTitles[5].textContent = 'Git & Работа В Команде';
-            skillTitles[6].textContent = 'Swift';
+            skillTitles[5].textContent = 'TypeScript (In Progress)';
+            skillTitles[6].textContent = 'Git & Работа В Команде';
+            skillTitles[7].textContent = 'Swift';
         }
     }
 
@@ -216,14 +218,14 @@ function switchLanguage(lang) {
     if (aboutText) {
         aboutText.innerHTML = lang === 'en'
             ? `<p>
-                Third-year ITMO University student actively developing in web development. 
+                Third-year ITMO University student actively rising in web development. 
                 I'm particularly fascinated by the process of turning design mockups into 
                 live, functional interfaces that real people see and use.
             </p>
             <p>
-                Currently deepening my JavaScript knowledge and preparing to master React 
+                Currently deepening my JavaScript knowledge and preparing to learn React 
                 and modern CSS frameworks. Alongside my studies, I practice by coding 
-                layouts from Figma and developing my frontend skills.
+                landing pages from Figma and evolving my frontend skills.
             </p>
             <p>
                 Seeking an internship or junior position in commercial development 
