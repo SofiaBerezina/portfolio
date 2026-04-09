@@ -116,18 +116,6 @@ function switchLanguage(lang) {
         }
     }
 
-    // Service item texts
-    const serviceItemTexts = document.querySelectorAll('.service-item-text');
-    if (serviceItemTexts.length >= 2) {
-        if (lang === 'en') {
-            serviceItemTexts[0].textContent = 'JS(ES6+), TS, React, Angular, HTML5, CSS3, SCSS/SASS/LESS, adaptive layout, Figma, Bootstrap, Taiga UI';
-            serviceItemTexts[1].textContent = 'Python, Django, DRF, SQL, PostgreSQL, Docker, Git, GitHub/GitLab';
-        } else {
-            serviceItemTexts[0].textContent = 'JS(ES6+), TS, React, Angular, HTML5, CSS3, SCSS/SASS/LESS, адаптивная верстка, Figma, Bootstrap, Taiga UI';
-            serviceItemTexts[1].textContent = 'Python, Django, DRF, SQL, PostgreSQL, Docker, Git, GitHub/GitLab';
-        }
-    }
-
     // Resume section
     const timelineHeaders = document.querySelectorAll('.timeline .h3');
     if (timelineHeaders.length >= 2) {
