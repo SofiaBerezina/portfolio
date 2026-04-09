@@ -41,7 +41,6 @@ function switchLanguage(lang) {
 
     // Update data-page attributes for articles
     if (lang === 'en') {
-        // English to Russian
         const aboutPage = document.querySelector('[data-page="обо мне"], [data-page="about"]');
         const resumePage = document.querySelector('[data-page="резюме"], [data-page="resume"]');
         const contactPage = document.querySelector('[data-page="контакты"], [data-page="contact"]');
@@ -50,7 +49,6 @@ function switchLanguage(lang) {
         if (resumePage) resumePage.dataset.page = 'resume';
         if (contactPage) contactPage.dataset.page = 'contact';
     } else {
-        // Russian to English
         const aboutPage = document.querySelector('[data-page="about"], [data-page="обо мне"]');
         const resumePage = document.querySelector('[data-page="resume"], [data-page="резюме"]');
         const contactPage = document.querySelector('[data-page="contact"], [data-page="контакты"]');
@@ -85,25 +83,27 @@ function switchLanguage(lang) {
     }
 
     const linksTitle = document.querySelector('.links-title');
-    if (linksTitle) linksTitle.textContent = lang === 'en' ? 'My Resources' : 'Мои Ресурсы';
+    if (linksTitle) linksTitle.textContent = lang === 'en' ? 'My Resources' : 'Мои ресурсы';
 
-    const linksSection = document.querySelectorAll('.resource-title');
-    if (linksSection.length >= 2) {
+    const resourceTitles = document.querySelectorAll('.resource-title');
+    if (resourceTitles.length >= 2) {
         if (lang === 'en') {
-            linksSection[1].textContent = 'Certificates';
+            resourceTitles[0].textContent = 'GitHub';
+            resourceTitles[1].textContent = 'Certificates';
         } else {
-            linksSection[1].textContent = 'Сертификаты';
+            resourceTitles[0].textContent = 'GitHub';
+            resourceTitles[1].textContent = 'Сертификаты';
         }
     }
 
-    const linksText = document.querySelectorAll('.resource-text');
-    if (linksText.length >= 2) {
+    const resourceTexts = document.querySelectorAll('.resource-text');
+    if (resourceTexts.length >= 2) {
         if (lang === 'en') {
-            linksText[0].textContent = 'My Projects & Code';
-            linksText[1].textContent = 'Learning documents';
+            resourceTexts[0].textContent = 'My Projects & Code';
+            resourceTexts[1].textContent = 'Learning documents';
         } else {
-            linksText[0].textContent = 'Мои проекты и код';
-            linksText[1].textContent = 'Документы об обучении';
+            resourceTexts[0].textContent = 'Мои проекты и код';
+            resourceTexts[1].textContent = 'Документы об обучении';
         }
     }
 
@@ -120,11 +120,11 @@ function switchLanguage(lang) {
     const serviceItemTexts = document.querySelectorAll('.service-item-text');
     if (serviceItemTexts.length >= 2) {
         if (lang === 'en') {
-            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS/SASS, Bootstrap, JavaScript, adaptive semantic layout';
-            serviceItemTexts[1].textContent = 'Python, Django Framework, SQL, Flask, API, DataBases';
+            serviceItemTexts[0].textContent = 'JS(ES6+), TS, React, Angular, HTML5, CSS3, SCSS/SASS/LESS, adaptive layout, Figma, Bootstrap, Taiga UI';
+            serviceItemTexts[1].textContent = 'Python, Django, DRF, SQL, PostgreSQL, Docker, Git, GitHub/GitLab';
         } else {
-            serviceItemTexts[0].textContent = 'HTML, CSS, SCSS/SASS, Bootstrap, JavaScript, адаптивная семантическая верстка';
-            serviceItemTexts[1].textContent = 'Python, Django Framework, SQL, Flask, API, работа с базами данных';
+            serviceItemTexts[0].textContent = 'JS(ES6+), TS, React, Angular, HTML5, CSS3, SCSS/SASS/LESS, адаптивная верстка, Figma, Bootstrap, Taiga UI';
+            serviceItemTexts[1].textContent = 'Python, Django, DRF, SQL, PostgreSQL, Docker, Git, GitHub/GitLab';
         }
     }
 
@@ -143,27 +143,25 @@ function switchLanguage(lang) {
     const skillsTitle = document.querySelector('.skills-title');
     if (skillsTitle) skillsTitle.textContent = lang === 'en' ? 'My Skills' : 'Мои навыки';
 
-    // Skills titles
+    // Skills titles (обновлено в соответствии с актуальными навыками)
     const skillTitles = document.querySelectorAll('.skills-item .h5');
     if (skillTitles.length >= 7) {
         if (lang === 'en') {
-            skillTitles[0].textContent = 'HTML/CSS/SCSS (Layout)';
-            skillTitles[1].textContent = 'Python & Django';
-            skillTitles[2].textContent = 'Data Analysis (Pandas, NumPy)';
-            skillTitles[3].textContent = 'SQL & DataBases';
-            skillTitles[4].textContent = 'JavaScript (In Progress)';
-            skillTitles[5].textContent = 'TypeScript (In Progress)';
-            skillTitles[6].textContent = 'Git & Team Work';
-            skillTitles[7].textContent = 'Swift';
+            skillTitles[0].textContent = 'JavaScript (ES6+) / TypeScript';
+            skillTitles[1].textContent = 'React / Angular';
+            skillTitles[2].textContent = 'HTML5/CSS3/SCSS (Adaptive Layout)';
+            skillTitles[3].textContent = 'Python / Django / DRF';
+            skillTitles[4].textContent = 'SQL / PostgreSQL';
+            skillTitles[5].textContent = 'Git / GitHub / Docker';
+            skillTitles[6].textContent = 'Figma / Bootstrap / Taiga UI';
         } else {
-            skillTitles[0].textContent = 'HTML/CSS/SCSS Верстка';
-            skillTitles[1].textContent = 'Python & Django';
-            skillTitles[2].textContent = 'Анализ Данных (Pandas, NumPy)';
-            skillTitles[3].textContent = 'SQL & Базы Данных';
-            skillTitles[4].textContent = 'JavaScript (В процессе)';
-            skillTitles[5].textContent = 'TypeScript (In Progress)';
-            skillTitles[6].textContent = 'Git & Работа В Команде';
-            skillTitles[7].textContent = 'Swift';
+            skillTitles[0].textContent = 'JavaScript (ES6+) / TypeScript';
+            skillTitles[1].textContent = 'React / Angular';
+            skillTitles[2].textContent = 'HTML5/CSS3/SCSS (адаптивная верстка)';
+            skillTitles[3].textContent = 'Python / Django / DRF';
+            skillTitles[4].textContent = 'SQL / PostgreSQL';
+            skillTitles[5].textContent = 'Git / GitHub / Docker';
+            skillTitles[6].textContent = 'Figma / Bootstrap / Taiga UI';
         }
     }
 
@@ -201,104 +199,131 @@ function switchLanguage(lang) {
 
     const contactBirthday = document.querySelector('.contact-birthday');
     if (contactBirthday) {
-        contactBirthday.innerHTML = lang === 'en'
-            ? '<time datetime="2004-10-23">October 23, 2004</time>'
-            : '<time datetime="2004-10-23">23 октября, 2004</time>';
+        if (lang === 'en') {
+            contactBirthday.innerHTML = '<time datetime="2004-10-23">October 23, 2004</time>';
+        } else {
+            contactBirthday.innerHTML = '<time datetime="2004-10-23">23 октября, 2004</time>';
+        }
     }
 
     const contactAddress = document.querySelector('.contact-address');
     if (contactAddress) {
-        contactAddress.innerHTML = lang === 'en'
-            ? '<address>Saint-Petersburg, Russia</address>'
-            : '<address>Санкт-Петербург, Россия</address>';
-    }
-
-    // About text
-    const aboutText = document.querySelector('.about-text');
-    if (aboutText) {
-        aboutText.innerHTML = lang === 'en'
-            ? `<p>
-                Third-year ITMO University student actively rising in web development. 
-                I'm particularly fascinated by the process of turning design mockups into 
-                live, functional interfaces that real people see and use.
-            </p>
-            <p>
-                Currently deepening my JavaScript knowledge and preparing to learn React 
-                and modern CSS frameworks. Alongside my studies, I practice by coding 
-                landing pages from Figma and evolving my frontend skills.
-            </p>
-            <p>
-                Seeking an internship or junior position in commercial development 
-                where I can apply my knowledge and grow under the guidance of an experienced team.
-            </p>`
-            : `<p>
-                Студентка 3 курса ИТМО, активно развиваюсь в веб-разработке. 
-                Особенно увлекает процесс превращения дизайн-макетов в живые, 
-                функциональные интерфейсы, которые видят и используют реальные люди.
-            </p>
-            <p>
-                В настоящее время углубленно изучаю JavaScript и готовлюсь к освоению React и современных CSS-фреймворков. 
-                Параллельно с учебой занимаюсь практикой - верстаю макеты из Figma и развиваю навыки фронтенд-разработки.
-            </p>
-            <p>
-                Ищу стажировку или junior-позицию в коммерческой разработке, 
-                где смогу применять свои знания и расти под руководством опытной команды.
-            </p>`;
-    }
-
-    // Update education and experience DATES
-    const timelineDates = document.querySelectorAll('.timeline-list span');
-    if (timelineDates.length >= 5) {
         if (lang === 'en') {
-            if (timelineDates[0]) timelineDates[0].textContent = '2019 — 2020';
-            if (timelineDates[1]) timelineDates[1].textContent = '2020 — 2021';
-            if (timelineDates[2]) timelineDates[2].textContent = '2025 (September)';
-            if (timelineDates[3]) timelineDates[3].textContent = '2023 — Present';
-            if (timelineDates[4]) timelineDates[4].textContent = '2025 (October)';
+            contactAddress.innerHTML = '<address>Saint-Petersburg, Russia</address>';
         } else {
-            if (timelineDates[0]) timelineDates[0].textContent = '2019 — 2020';
-            if (timelineDates[1]) timelineDates[1].textContent = '2020 — 2021';
-            if (timelineDates[2]) timelineDates[2].textContent = '2025 (сентябрь)';
-            if (timelineDates[3]) timelineDates[3].textContent = '2023 — настоящее время';
-            if (timelineDates[4]) timelineDates[4].textContent = '2025 (октябрь)';
+            contactAddress.innerHTML = '<address>Санкт-Петербург, Россия</address>';
         }
     }
 
-    // Update education and experience TEXTS
+    // About text (обновлено с учетом обучения в Т-Банке и NeoFlex)
+    const aboutText = document.querySelector('.about-text');
+    if (aboutText) {
+        if (lang === 'en') {
+            aboutText.innerHTML = `<p>
+                My name is Sofia Berezina, I am a 3rd year student at ITMO University, purposefully developing in frontend development.
+                I am studying at the training centers of major companies T-Bank and NeoFlex in the frontend direction,
+                where I am actively mastering React and modern JavaScript.
+            </p>
+            <p>
+                I am passionate about turning design mockups into live, functional interfaces. I have experience in backend development with Python/Django,
+                which helps me better understand client-server interaction.
+            </p>
+            <p>
+                Looking for an internship or junior position in commercial development
+                where I can apply my knowledge and grow under the guidance of an experienced team.
+            </p>`;
+        } else {
+            aboutText.innerHTML = `<p>
+                Меня зовут Березина Софья, я студентка 3 курса ИТМО, целенаправленно развиваюсь во фронтенд-разработке.
+                Прохожу обучение в учебных центрах крупных компаний Т-Банка и NeoFlex по направлению фронтенд, где
+                активно осваиваю React и современный JavaScript.
+            </p>
+            <p>
+                Увлекаюсь превращением дизайн-макетов в живые, функциональные интерфейсы. Имею опыт
+                бэкенд-разработки на Python/Django,
+                что помогает глубже понимать клиент-серверное взаимодействие.
+            </p>
+            <p>
+                Ищу стажировку или junior-позицию в коммерческой разработке,
+                где смогу применять свои знания и расти под руководством опытной команды.
+            </p>`;
+        }
+    }
+
+    // Update education and experience texts (обновлено в соответствии с HTML)
     const timelineTitles = document.querySelectorAll('.timeline-item-title');
+    const timelineDates = document.querySelectorAll('.timeline-list span');
     const timelineTexts = document.querySelectorAll('.timeline-text');
 
-    if (timelineTitles.length >= 5 && timelineTexts.length >= 5) {
+    if (timelineTitles.length >= 8 && timelineDates.length >= 8 && timelineTexts.length >= 8) {
         if (lang === 'en') {
-            if (timelineTitles[0]) timelineTitles[0].textContent = 'Yandex Lyceum, Python Programming Course';
-            if (timelineTexts[0]) timelineTexts[0].textContent = 'Learning the basics of Python programming, solving algorithmic problems, developing first projects.';
+            // Education (0-3)
+            timelineTitles[0].textContent = 'Yandex Lyceum, Python Programming Course';
+            timelineDates[0].textContent = '2019 — 2020';
+            timelineTexts[0].textContent = 'Learning the basics of Python programming, solving algorithmic problems, developing first projects.';
 
-            if (timelineTitles[1]) timelineTitles[1].textContent = 'Yandex Lyceum, Advanced Course';
-            if (timelineTexts[1]) timelineTexts[1].textContent = 'In-depth study of Python, working with frameworks, web application development, database basics.';
+            timelineTitles[1].textContent = 'Yandex Lyceum, Advanced Course';
+            timelineDates[1].textContent = '2020 — 2021';
+            timelineTexts[1].textContent = 'In-depth study of Python, working with frameworks, web application development, database basics.';
 
-            if (timelineTitles[2]) timelineTitles[2].textContent = 'Yandex Lyceum, Frontend Course';
-            if (timelineTexts[2]) timelineTexts[2].textContent = 'Frontend Development in HTML, CSS (including grid and flex).';
+            timelineTitles[2].textContent = 'Yandex Lyceum, Frontend Course';
+            timelineDates[2].textContent = '2025 (September)';
+            timelineTexts[2].textContent = 'Learning React and Angular, working with components, hooks, state. Implemented a global chat project within the course.';
 
-            if (timelineTitles[3]) timelineTitles[3].textContent = 'ITMO University';
-            if (timelineTexts[3]) timelineTexts[3].textContent = 'Faculty of Information Technology and Programming (Applied Informatics), "Mobile and Network Technologies" direction. Studying modern development technologies, algorithms and data structures. Studying: Python, data analysis, networks, databases, mobile development (Swift). Deepening in frontend development.';
+            timelineTitles[3].textContent = 'ITMO University';
+            timelineDates[3].textContent = '2023 — 2027';
+            timelineTexts[3].textContent = 'Faculty of Information Technology and Programming (Applied Informatics), "Mobile and Network Technologies" direction. Studying modern development technologies, algorithms and data structures.';
 
-            if (timelineTitles[4]) timelineTitles[4].textContent = 'Internship at Alfa-Bank';
-            if (timelineTexts[4]) timelineTexts[4].textContent = 'Online internship in data analysis.';
+            // Experience (4-7)
+            timelineTitles[4].textContent = 'Alfa-Bank — Online Practice';
+            timelineDates[4].textContent = '2025 (October)';
+            timelineTexts[4].textContent = 'Practice in the field of data analysis.';
+
+            timelineTitles[5].textContent = 'T-Bank — Training Center (Frontend)';
+            timelineDates[5].textContent = '2026 (February) — 2026 (May)';
+            timelineTexts[5].textContent = 'Learning React and Angular, working with components, hooks, state. Implemented a global chat project within the course.';
+
+            timelineTitles[6].textContent = 'VK — Online Practice "Development"';
+            timelineDates[6].textContent = '2026 (February)';
+            timelineTexts[6].textContent = 'Participation in the development of a user segmentation service. Working in a team on a business task, experience in designing segmentation logic, interacting with API.';
+
+            timelineTitles[7].textContent = 'NeoFlex — Training Center (Frontend)';
+            timelineDates[7].textContent = '2026 (February) — 2026 (May)';
+            timelineTexts[7].textContent = 'In-depth study of modern JavaScript, TypeScript, React.';
         } else {
-            if (timelineTitles[0]) timelineTitles[0].textContent = 'Яндекс Лицей, курс программирования на Python';
-            if (timelineTexts[0]) timelineTexts[0].textContent = 'Изучение основ программирования на Python, решение алгоритмических задач, разработка первых проектов.';
+            // Education (0-3)
+            timelineTitles[0].textContent = 'Яндекс Лицей, курс программирования на Python';
+            timelineDates[0].textContent = '2019 — 2020';
+            timelineTexts[0].textContent = 'Изучение основ программирования на Python, решение алгоритмических задач, разработка первых проектов.';
 
-            if (timelineTitles[1]) timelineTitles[1].textContent = 'Яндекс Лицей, продвинутый курс';
-            if (timelineTexts[1]) timelineTexts[1].textContent = 'Углубленное изучение Python, работа с фреймворками, разработка веб-приложений, основы баз данных.';
+            timelineTitles[1].textContent = 'Яндекс Лицей, продвинутый курс';
+            timelineDates[1].textContent = '2020 — 2021';
+            timelineTexts[1].textContent = 'Углубленное изучение Python, работа с фреймворками, разработка веб-приложений, основы баз данных.';
 
-            if (timelineTitles[2]) timelineTitles[2].textContent = 'Яндекс Лицей, курс по фронтенду';
-            if (timelineTexts[2]) timelineTexts[2].textContent = 'Изучение HTML и CSS (включая grid и flex).';
+            timelineTitles[2].textContent = 'Яндекс Лицей, курс по фронтенду';
+            timelineDates[2].textContent = '2025 (сентябрь)';
+            timelineTexts[2].textContent = 'Изучение React и Angular, работа с компонентами, хуками, состоянием. В рамках курса реализовала проект глобального чата.';
 
-            if (timelineTitles[3]) timelineTitles[3].textContent = 'Университет ИТМО';
-            if (timelineTexts[3]) timelineTexts[3].textContent = 'Факультет информационных технологий и программирования (прикладная информатика), направление "Мобильные и сетевые технологии". Изучение современных технологий разработки, алгоритмов и структур данных. Изучаю: Python, анализ данных, сети, базы данных, мобильную разработку (Swift). Углубляюсь во frontend-разработку.';
+            timelineTitles[3].textContent = 'Университет ИТМО';
+            timelineDates[3].textContent = '2023 — 2027';
+            timelineTexts[3].textContent = 'Факультет информационных технологий и программирования (прикладная информатика), направление "Мобильные и сетевые технологии". Изучение современных технологий разработки, алгоритмов и структур данных.';
 
-            if (timelineTitles[4]) timelineTitles[4].textContent = 'Практика в Альфа-Банк';
-            if (timelineTexts[4]) timelineTexts[4].textContent = 'Онлайн-практика в области анализа данных.';
+            // Experience (4-7)
+            timelineTitles[4].textContent = 'Альфа-Банк — Онлайн-практика';
+            timelineDates[4].textContent = '2025 (октябрь)';
+            timelineTexts[4].textContent = 'Практика в области анализа данных.';
+
+            timelineTitles[5].textContent = 'Т-Банк — Учебный центр (фронтенд)';
+            timelineDates[5].textContent = '2026 (февраль) — 2026 (май)';
+            timelineTexts[5].textContent = 'Изучение React и Angular, работа с компонентами, хуками, состоянием. В рамках курса реализовала проект глобального чата.';
+
+            timelineTitles[6].textContent = 'VK — онлайн-практика по направлению "Разработка"';
+            timelineDates[6].textContent = '2026 (февраль)';
+            timelineTexts[6].textContent = 'Участие в разработке сервиса сегментирования пользователей. Работа в команде над бизнес-задачей, опыт проектирования логики сегментации, взаимодействие с API.';
+
+            timelineTitles[7].textContent = 'NeoFlex — Учебный центр (фронтенд)';
+            timelineDates[7].textContent = '2026 (февраль) — 2026 (май)';
+            timelineTexts[7].textContent = 'Углубленное изучение современного JavaScript, TypeScript, React.';
         }
     }
 }
@@ -310,17 +335,13 @@ function initNavigation() {
 
     navigationLinks.forEach(link => {
         link.addEventListener("click", function () {
-            // Удаляем активный класс со всех ссылок и страниц
             navigationLinks.forEach(l => l.classList.remove("active"));
             pages.forEach(p => p.classList.remove("active"));
 
-            // Добавляем активный класс к нажатой ссылке
             this.classList.add("active");
 
-            // Находим и активируем соответствующую страницу
             const linkText = this.textContent.trim().toLowerCase();
 
-            // Ищем страницу по data-page атрибуту
             let targetPage = null;
             pages.forEach(page => {
                 if (page.dataset.page === linkText) {
@@ -328,7 +349,6 @@ function initNavigation() {
                 }
             });
 
-            // Альтернативный поиск если точное совпадение не найдено
             if (!targetPage) {
                 if (linkText === 'about' || linkText === 'обо мне') {
                     targetPage = document.querySelector('[data-page="about"], [data-page="обо мне"]');
@@ -343,7 +363,6 @@ function initNavigation() {
                 targetPage.classList.add("active");
             }
 
-            // Закрываем sidebar на мобильных устройствах
             const sidebar = document.querySelector("[data-sidebar]");
             if (sidebar && sidebar.classList.contains("active")) {
                 sidebar.classList.remove("active");
@@ -374,7 +393,6 @@ function initForm() {
 
     if (!form || !formBtn) return;
 
-    // Валидация формы
     formInputs.forEach(input => {
         input.addEventListener("input", function () {
             const isValid = form.checkValidity();
@@ -382,12 +400,9 @@ function initForm() {
         });
     });
 
-    // Обработка отправки с визуальной обратной связью
     form.addEventListener("submit", function(e) {
-        e.preventDefault(); // Предотвращаем стандартную отправку
+        e.preventDefault();
 
-        // Форма отправится автоматически через Formspree
-        // Мы только меняем состояние кнопки
         const savedLang = localStorage.getItem('lang') || 'ru';
         const sendingText = savedLang === 'en' ? 'Sending...' : 'Отправка...';
         const sentText = savedLang === 'en' ? 'Message sent!' : 'Сообщение отправлено!';
@@ -396,7 +411,6 @@ function initForm() {
         formBtn.innerHTML = `<ion-icon name="hourglass-outline"></ion-icon><span>${sendingText}</span>`;
         formBtn.disabled = true;
 
-        // Через 3 секунды возвращаем исходное состояние
         setTimeout(() => {
             formBtn.innerHTML = `<ion-icon name="paper-plane"></ion-icon><span>${sentText}</span>`;
             setTimeout(() => {
@@ -410,20 +424,13 @@ function initForm() {
 
 // Инициализация при загрузке DOM
 document.addEventListener('DOMContentLoaded', function () {
-    // Инициализация навигации
     initNavigation();
-
-    // Инициализация sidebar
     initSidebar();
-
-    // Инициализация формы
     initForm();
 
-    // Восстанавливаем язык из localStorage
     const savedLang = localStorage.getItem('lang') || 'ru';
     updateActiveLanguageButton(savedLang);
 
-    // Если сохранен английский, применяем перевод с небольшой задержкой
     if (savedLang === 'en') {
         setTimeout(() => {
             switchLanguage('en');
