@@ -34,7 +34,7 @@ const ExperienceSection = ({ animated = false }: ExperienceSectionProps) => {
                                         className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-700 overflow-hidden flex-shrink-0"
                                     >
                                         <img
-                                            src={`/icons/${exp.icon}`}
+                                            src={`/portfolio/icons/${exp.icon}`}
                                             alt={exp.company}
                                             className="w-6 h-6 object-contain"
                                         />

@@ -46,7 +46,7 @@ function ProfileCard() {
 
                 <div className="mt-6 flex justify-center">
                     <a
-                        href="/resume.pdf"
+                        href="/portfolio/resume.pdf"
                         download="Resume_Sofia_Berezina.pdf"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     >
