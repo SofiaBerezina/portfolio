@@ -9,10 +9,10 @@ interface ExperienceSectionProps {
 
 const ExperienceSection = ({ animated = false }: ExperienceSectionProps) => {
     return (
-        <div className="px-10 py-0">
+        <div className="px-4 sm:px-6 md:px-10 py-0">
             <TitleH1 titlePart_1={'COURSES &'} titlePart_2={'EXPERIENCE'} />
 
-            <div className="space-y-6 mt-6">
+            <div className="space-y-4 sm:space-y-6 mt-6">
                 {experiences.map((exp, index) => {
                     const Card = animated ? motion.div : 'div';
                     const cardProps = animated ? {
@@ -26,10 +26,10 @@ const ExperienceSection = ({ animated = false }: ExperienceSectionProps) => {
                         <Card
                             key={exp.id}
                             {...cardProps}
-                            className="rounded-2xl p-6 transition-all duration-300 hover:shadow-xl dark:bg-neutral-900/50 bg-neutral-100/60 hover:bg-neutral-200/70 dark:hover:bg-neutral-800/70 border border-neutral-200 dark:border-neutral-800"
+                            className="rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:shadow-xl dark:bg-neutral-900/50 bg-neutral-100/60 hover:bg-neutral-200/70 dark:hover:bg-neutral-800/70 border border-neutral-200 dark:border-neutral-800"
                         >
-                            <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-                                <div className="flex items-center gap-3">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-3">
+                                <div className="flex items-center gap-3 w-full sm:w-auto">
                                     <div
                                         className="w-10 h-10 rounded-full flex items-center justify-center bg-neutral-200 dark:bg-neutral-700 overflow-hidden flex-shrink-0"
                                     >
@@ -39,17 +39,17 @@ const ExperienceSection = ({ animated = false }: ExperienceSectionProps) => {
                                             className="w-6 h-6 object-contain"
                                         />
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold dark:text-white text-black">
+                                    <div className="flex-1 min-w-0">
+                                        <h3 className="text-lg sm:text-xl font-bold dark:text-white text-black truncate">
                                             {exp.company}
                                         </h3>
                                         <div className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400">
-                                            <MapPin size={14} />
-                                            <span>{exp.location}</span>
+                                            <MapPin size={14} className="flex-shrink-0" />
+                                            <span className="truncate">{exp.location}</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 bg-neutral-200 dark:bg-neutral-800 px-3 py-1 rounded-full">
+                                <div className="flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 bg-neutral-200 dark:bg-neutral-800 px-3 py-1 rounded-full flex-shrink-0">
                                     <Calendar size={14} />
                                     <span>{exp.date}</span>
                                 </div>
@@ -62,8 +62,8 @@ const ExperienceSection = ({ animated = false }: ExperienceSectionProps) => {
                             <ul className="space-y-2">
                                 {exp.description.map((item, i) => (
                                     <li key={i} className="text-sm text-zinc-600 dark:text-zinc-400 flex items-start gap-2">
-                                        <span className="text-purple-500 mt-1">•</span>
-                                        <span>{item}</span>
+                                        <span className="text-purple-500 mt-1 flex-shrink-0">•</span>
+                                        <span className="break-words">{item}</span>
                                     </li>
                                 ))}
                             </ul>
