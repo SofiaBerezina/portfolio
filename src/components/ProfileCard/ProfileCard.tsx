@@ -10,7 +10,7 @@ import { SocialIcon } from "../../shared/ui";
 const socials = [
     { label: "GitHub", href: "https://github.com/SofiaBerezina", icon: SiGithub },
     { label: "Telegram", href: "https://t.me/berfos_k", icon: SiTelegram },
-    { label: "Portfolio", href: "https://devakshay.vercel.app/home", icon: Globe },
+    { label: "Portfolio", href: "https://sofiaberezina.github.io/portfolio/", icon: Globe },
     { label: "Certificates", href: "https://drive.google.com/drive/folders/1NGmxUuSyxs8oVUBHsZLzIlqurwOLATJO?usp=sharing", icon: FileBadgeIcon },
 ];
 
